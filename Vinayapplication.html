@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>JobTrack - Applications</title>
+
+    <!-- Your main CSS -->
+    <link rel="stylesheet" href="Vinay.css">
+
+    <!-- Applications page CSS -->
+    <link rel="stylesheet" href="Vinayappliction.css">
+
+</head>
+
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            JobTrack
+        </div>
+
+        <nav>
+
+            <a href="Vinay.html">
+                Dashboard
+            </a>
+
+            <a href="Vinayapplication.html" class="active">
+                Applications
+            </a>
+
+            <a href="Vinayinterviews.html">
+                Interviews
+            </a>
+
+            <a href="#">
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main">
+
+        <!-- Header -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Applications</h1>
+
+                <p>
+                    Track and manage your job applications
+                </p>
+
+            </div>
+
+
+            <button class="add-btn" id="addApplicationBtn">
+
+                + Add Application
+
+            </button>
+
+        </header>
+
+
+
+        <!-- ================= FILTERS ================= -->
+
+        <section class="filters">
+
+            <!-- Search -->
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by company or job role..."
+            >
+
+
+            <!-- Status -->
+
+            <select id="statusFilter">
+
+                <option value="all">
+                    All Status
+                </option>
+
+                <option value="Applied">
+                    Applied
+                </option>
+
+                <option value="Interview">
+                    Interview
+                </option>
+
+                <option value="Rejected">
+                    Rejected
+                </option>
+
+                <option value="Selected">
+                    Selected
+                </option>
+
+            </select>
+
+
+            <!-- Location -->
+
+            <select id="locationFilter">
+
+                <option value="all">
+                    All Locations
+                </option>
+
+                <option value="Hyderabad">
+                    Hyderabad
+                </option>
+
+                <option value="Bangalore">
+                    Bangalore
+                </option>
+
+                <option value="Chennai">
+                    Chennai
+                </option>
+
+                <option value="Pune">
+                    Pune
+                </option>
+
+            </select>
+
+        </section>
+
+
+
+        <!-- ================= APPLICATIONS TABLE ================= -->
+
+        <section class="applications">
+
+            <div class="table-container">
+
+                <table class="applications-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Company Name
+                            </th>
+
+                            <th>
+                                Job Role
+                            </th>
+
+                            <th>
+                                Location
+                            </th>
+
+                            <th>
+                                Applied Date
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Actions
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="applicationsList">
+
+
+                        <!-- Application 1 -->
+
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    TCS
+                                </strong>
+                            </td>
+
+                            <td>
+                                Software Engineer
+                            </td>
+
+                            <td>
+                                Hyderabad
+                            </td>
+
+                            <td>
+                                Sep 15, 2026
+                            </td>
+
+                            <td>
+
+                                <span class="status applied">
+                                    Applied
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="edit-btn">
+                                    ✏️
+                                </button>
+
+                                <button class="delete-btn">
+                                    🗑️
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Application 2 -->
+
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    Infosys
+                                </strong>
+                            </td>
+
+                            <td>
+                                Python Developer
+                            </td>
+
+                            <td>
+                                Bangalore
+                            </td>
+
+                            <td>
+                                Sep 13, 2026
+                            </td>
+
+                            <td>
+
+                                <span class="status interview">
+                                    Interview
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="edit-btn">
+                                    ✏️
+                                </button>
+
+                                <button class="delete-btn">
+                                    🗑️
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Application 3 -->
+
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    Wipro
+                                </strong>
+                            </td>
+
+                            <td>
+                                Web Developer
+                            </td>
+
+                            <td>
+                                Hyderabad
+                            </td>
+
+                            <td>
+                                Sep 10, 2026
+                            </td>
+
+                            <td>
+
+                                <span class="status rejected">
+                                    Rejected
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="edit-btn">
+                                    ✏️
+                                </button>
+
+                                <button class="delete-btn">
+                                    🗑️
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Application 4 -->
+
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    TechNova
+                                </strong>
+                            </td>
+
+                            <td>
+                                Full Stack Developer
+                            </td>
+
+                            <td>
+                                Chennai
+                            </td>
+
+                            <td>
+                                Sep 08, 2026
+                            </td>
+
+                            <td>
+
+                                <span class="status applied">
+                                    Applied
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="edit-btn">
+                                    ✏️
+                                </button>
+
+                                <button class="delete-btn">
+                                    🗑️
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Application 5 -->
+
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    Accenture
+                                </strong>
+                            </td>
+
+                            <td>
+                                Associate Software Engineer
+                            </td>
+
+                            <td>
+                                Hyderabad
+                            </td>
+
+                            <td>
+                                Sep 05, 2026
+                            </td>
+
+                            <td>
+
+                                <span class="status interview">
+                                    Interview
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button class="edit-btn">
+                                    ✏️
+                                </button>
+
+                                <button class="delete-btn">
+                                    🗑️
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- Footer -->
+
+            <div class="table-footer">
+
+                <span>
+                    Showing 1 to 5 of 5 applications
+                </span>
+
+                <div class="pagination">
+
+                    <button>
+                        ‹
+                    </button>
+
+                    <button class="page-active">
+                        1
+                    </button>
+
+                    <button>
+                        ›
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="Vinayapplication.js"></script>
+
+</body>
+
+</html>

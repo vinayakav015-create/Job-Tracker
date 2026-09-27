@@ -1,0 +1,237 @@
+/* =========================
+   JOBTRACK SETTINGS
+   Vinaysettings.css
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background: #f5f7fb;
+    color: #222;
+}
+/* =========================
+   MAIN CONTAINER
+   ========================= */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+/* =========================
+   SIDEBAR
+   ========================= */
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background: #111827;
+    color: white;
+    padding: 25px 15px;
+}
+.sidebar h2 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 35px;
+}
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.sidebar nav a {
+    color: #d1d5db;
+    text-decoration: none;
+    padding: 14px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.sidebar nav a:hover {
+    background: #2563eb;
+    color: white;
+}
+.sidebar nav a.active {
+    background: #2563eb;
+    color: white;
+}
+/* =========================
+   MAIN CONTENT
+   ========================= */
+.main-content {
+    flex: 1;
+    padding: 35px;
+}
+/* =========================
+   HEADER
+   ========================= */
+.header {
+    margin-bottom: 25px;
+}
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+.header p {
+    color: #6b7280;
+    font-size: 15px;
+}
+/* =========================
+   SETTINGS SECTIONS
+   ========================= */
+.settings-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+.settings-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+/* =========================
+   SETTING ITEMS
+   ========================= */
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 17px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+.setting-item:last-child {
+    border-bottom: none;
+}
+.setting-item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.setting-item p {
+    color: #6b7280;
+    font-size: 14px;
+}
+/* =========================
+   INPUT BOXES
+   ========================= */
+.setting-item input[type="text"],
+.setting-item input[type="email"] {
+    width: 250px;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+}
+.setting-item input[type="text"]:focus,
+.setting-item input[type="email"]:focus {
+    border-color: #2563eb;
+}
+/* =========================
+   TOGGLE SWITCH
+   ========================= */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 27px;
+    flex-shrink: 0;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #d1d5db;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 3px;
+    top: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.switch input:checked + .slider {
+    background: #2563eb;
+}
+.switch input:checked + .slider:before {
+    transform: translateX(23px);
+}
+/* =========================
+   BUTTONS
+   ========================= */
+.actions {
+    margin-top: 10px;
+}
+.actions button {
+    border: none;
+    padding: 12px 22px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+#saveSettings {
+    background: #2563eb;
+    color: white;
+}
+#saveSettings:hover {
+    background: #1d4ed8;
+}
+#resetSettings {
+    background: #e5e7eb;
+    color: #111827;
+}
+#resetSettings:hover {
+    background: #d1d5db;
+}
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 15px;
+    }
+    .sidebar h2 {
+        margin-bottom: 15px;
+    }
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .sidebar nav a {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    .main-content {
+        padding: 20px;
+    }
+    .header h1 {
+        font-size: 26px;
+    }
+    .setting-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .setting-item input[type="text"],
+    .setting-item input[type="email"] {
+        width: 100%;
+    }
+}

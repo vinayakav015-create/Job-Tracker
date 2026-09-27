@@ -1,0 +1,603 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 240px;
+    height: 100vh;
+
+    background: #111827;
+
+    padding: 30px 20px;
+}
+
+
+/* Logo */
+
+.logo {
+    color: white;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    margin-bottom: 45px;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+nav a {
+    text-decoration: none;
+
+    color: #9ca3af;
+
+    padding: 14px 16px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    background: #1f2937;
+    color: white;
+}
+
+
+nav a.active {
+    background: #2563eb;
+    color: white;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main {
+    margin-left: 240px;
+
+    padding: 35px;
+}
+
+
+/* =========================
+   TOP HEADER
+========================= */
+
+.topbar {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+
+.topbar h1 {
+    font-size: 30px;
+
+    margin-bottom: 6px;
+}
+
+
+.topbar p {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   ADD APPLICATION BUTTON
+========================= */
+
+.add-btn {
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 20px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.add-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   FILTER SECTION
+========================= */
+
+.filters {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Search box */
+
+.filters input {
+    flex: 1;
+
+    min-width: 250px;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+.filters input:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* Dropdown */
+
+.filters select {
+    width: 190px;
+
+    padding: 13px 15px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+.filters select:focus {
+    border-color: #2563eb;
+}
+
+
+/* =========================
+   APPLICATIONS CONTAINER
+========================= */
+
+.applications {
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+.applications-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+}
+
+
+/* Table headings */
+
+.applications-table th {
+    text-align: left;
+
+    padding: 15px;
+
+    background: #f9fafb;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* Table cells */
+
+.applications-table td {
+    padding: 17px 15px;
+
+    border-bottom: 1px solid #f0f0f0;
+
+    font-size: 14px;
+
+    color: #4b5563;
+}
+
+
+/* Company name */
+
+.applications-table td strong {
+    color: #111827;
+
+    font-size: 14px;
+}
+
+
+/* Table hover */
+
+.applications-table tbody tr {
+    transition: 0.2s;
+}
+
+
+.applications-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.status {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* Applied */
+
+.status.applied {
+    background: #dbeafe;
+
+    color: #1d4ed8;
+}
+
+
+/* Interview */
+
+.status.interview {
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+
+/* Rejected */
+
+.status.rejected {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+
+/* Selected */
+
+.status.selected {
+    background: #fef3c7;
+
+    color: #b45309;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.edit-btn,
+.delete-btn {
+    border: none;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    margin-right: 5px;
+
+    transition: 0.2s;
+}
+
+
+/* Edit */
+
+.edit-btn {
+    background: #dbeafe;
+
+    color: #2563eb;
+}
+
+
+.edit-btn:hover {
+    background: #bfdbfe;
+}
+
+
+/* Delete */
+
+.delete-btn {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+
+.delete-btn:hover {
+    background: #fecaca;
+}
+
+
+/* =========================
+   TABLE FOOTER
+========================= */
+
+.table-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.pagination {
+    display: flex;
+
+    gap: 6px;
+}
+
+
+.pagination button {
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid #e5e7eb;
+
+    background: white;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    color: #6b7280;
+}
+
+
+.pagination button:hover {
+    background: #f3f4f6;
+}
+
+
+.pagination button.page-active {
+    background: #2563eb;
+
+    color: white;
+
+    border-color: #2563eb;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .main {
+        margin-left: 200px;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .filters input {
+        width: 100%;
+        flex: none;
+    }
+
+    .filters select {
+        flex: 1;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    /* Sidebar */
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        padding: 20px;
+    }
+
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+
+    nav {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+    }
+
+
+    nav a {
+        padding: 10px 12px;
+
+        font-size: 13px;
+    }
+
+
+    /* Main */
+
+    .main {
+        margin-left: 0;
+
+        padding: 20px;
+    }
+
+
+    /* Header */
+
+    .topbar {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .add-btn {
+        width: 100%;
+    }
+
+
+    /* Filters */
+
+    .filters {
+        flex-direction: column;
+    }
+
+
+    .filters input,
+    .filters select {
+        width: 100%;
+    }
+
+
+    /* Applications */
+
+    .applications {
+        padding: 15px;
+    }
+
+
+    /* Footer */
+
+    .table-footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        align-items: flex-start;
+    }
+}

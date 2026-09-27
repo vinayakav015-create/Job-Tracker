@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobTrack - Settings</title>
+    <!-- Your existing CSS -->
+    <link rel="stylesheet" href="vinaysettings.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>JobTrack</h2>
+            <nav>
+                <a href="Vinay.html">Dashboard</a>
+                <a href="Vinayapplication.html">
+                    Applications
+                </a>
+                <a href="Vinayinterviews.html">
+                    Interviews
+                </a>
+                <a href="Vinaysettings.html" class="active">
+                    Settings
+                </a>
+            </nav>
+        </aside>
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <h1>Settings</h1>
+                <p>Manage your JobTrack preferences.</p>
+            </div>
+            <!-- Profile Settings -->
+            <section class="settings-section">
+                <h2>Profile Settings</h2>
+                <div class="setting-item">
+                    <div>
+                        <h3>Name</h3>
+                        <p>Update your name</p>
+                    </div>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                    >
+                </div>
+                <div class="setting-item">
+                    <div>
+                        <h3>Email</h3>
+                        <p>Update your email address</p>
+                    </div>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                    >
+                </div>
+            </section>
+            <!-- Notification Settings -->
+            <section class="settings-section">
+                <h2>Notifications</h2>
+                <div class="setting-item">
+                    <div>
+                        <h3>Interview Reminders</h3>
+                        <p>Get reminders about upcoming interviews.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <div>
+                        <h3>Application Updates</h3>
+                        <p>Get updates about your applications.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </section>
+            <!-- Appearance -->
+            <section class="settings-section">
+                <h2>Appearance</h2>
+                <div class="setting-item">
+                    <div>
+                        <h3>Dark Mode</h3>
+                        <p>Change the appearance of JobTrack.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="darkMode">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </section>
+            <!-- Save Button -->
+            <div class="actions">
+                <button id="saveSettings">
+                    Save Settings
+                </button>
+                <button id="resetSettings">
+                    Reset
+                </button>
+            </div>
+        </main>
+    </div>
+    <!-- If you already have Vinaysettings.js, add it here -->
+    <!-- <script src="Vinaysettings.js"></script> -->
+</body>
+</html>
